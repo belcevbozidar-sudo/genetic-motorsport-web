@@ -234,7 +234,7 @@ button, input, select {
     position: relative;
     padding-top: 160px;
     padding-bottom: 100px;
-    background-color: var(--bg-secondary);
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-secondary) 40%, #ffffff 100%);
     overflow: hidden;
 }
 
@@ -1187,7 +1187,7 @@ button, input, select {
     }
     
     .services.section-padding {
-        padding-top: 1.5rem !important;
+        padding-top: 0 !important;
     }
     
     .nav-links, .nav-cta {
@@ -1203,8 +1203,8 @@ button, input, select {
     }
     
     .hero {
-        padding-top: 180px !important;
-        padding-bottom: 20px !important;
+        padding-top: 190px !important;
+        padding-bottom: 55px !important;
     }
     
     .hero-wrapper {
