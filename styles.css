@@ -1183,7 +1183,11 @@ button, input, select {
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 5rem 0;
+        padding: 3.5rem 0 !important;
+    }
+    
+    .services.section-padding {
+        padding-top: 1.5rem !important;
     }
     
     .nav-links, .nav-cta {
@@ -1199,12 +1203,16 @@ button, input, select {
     }
     
     .hero {
-        padding-top: 135px !important;
-        padding-bottom: 30px !important;
+        padding-top: 180px !important;
+        padding-bottom: 20px !important;
     }
     
     .hero-wrapper {
         gap: 1.5rem !important;
+    }
+    
+    .hero-media {
+        display: none !important;
     }
     
     .hero-badge {
