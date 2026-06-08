@@ -1201,8 +1201,8 @@ button, input, select {
     }
     
     .hero {
-        padding-top: 240px !important;
-        padding-bottom: 140px !important;
+        padding-top: 170px !important;
+        padding-bottom: 170px !important;
     }
     
     .hero-wrapper {
@@ -1214,24 +1214,24 @@ button, input, select {
     }
     
     .hero-badge {
-        margin-bottom: 45px !important;
+        margin-bottom: 35px !important;
         font-size: 0.8rem !important;
         padding: 0.4rem 0.8rem !important;
     }
     
     .hero-title {
         font-size: 2rem !important;
-        margin-bottom: 45px !important;
+        margin-bottom: 35px !important;
         letter-spacing: -1px !important;
     }
     
     .hero-description {
         font-size: 0.95rem !important;
-        margin-bottom: 55px !important;
+        margin-bottom: 45px !important;
     }
     
     .hero-brand-slider {
-        margin-bottom: 60px !important;
+        margin-bottom: 50px !important;
     }
     
     .hero-brand-slider .brand-marquee-track {
