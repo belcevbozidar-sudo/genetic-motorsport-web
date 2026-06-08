@@ -1201,7 +1201,7 @@ button, input, select {
     }
     
     .hero {
-        padding-top: 170px !important;
+        padding-top: 185px !important;
         padding-bottom: 170px !important;
     }
     
@@ -1257,8 +1257,65 @@ button, input, select {
         gap: 0.5rem !important;
     }
     
+    /* Fix contacts page overflow on mobile */
+    .info-card {
+        padding: 1rem 1.25rem !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .info-details a, .info-details p {
+        font-size: 1.05rem !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    .brand-showcase {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Fix Portal alignment and overflow on mobile */
+    .portal-grid {
+        gap: 1.5rem !important;
+    }
+    
+    .portal-sidebar {
+        padding: 1.5rem !important;
+        width: 100% !important;
+    }
+    
+    .specs-header {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    
+    .specs-title {
+        font-size: 1.3rem !important;
+        text-align: center !important;
+    }
+    
     .specs-display-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .spec-val-box p {
+        font-size: 1.5rem !important;
+    }
+    
+    .spec-meter-container {
+        padding: 1rem !important;
+    }
+    
+    .upload-card {
+        padding: 1.5rem !important;
+    }
+    
+    .upload-area {
+        padding: 2rem 1rem !important;
     }
     
     .footer-grid {
