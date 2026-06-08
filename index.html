@@ -3,425 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>+359 Tuning Studio | Премиум Софтуерен Тунинг & Екстериорен Дизайн</title>
-    <meta name="description" content="Предефинираме мощността. Професионално студио за чиптунинг (Stage 1, 2, 3), софтуерни модификации и индивидуален оптичен дизайн на спортни и луксозни автомобили в България.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <title>+359 Tuning Studio | Автосервиз, Диагностика и Чип Тунинг гр. Бургас</title>
+    <meta name="description" content="Специализиран автоцентър в гр. Бургас. Диагностика на дилърско ниво, ремонт, дизелов и механичен сервиз, индивидуален чип тунинг за леки и товарни автомобили.">
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header id="main-header" class="header-nav">
-        <div class="container nav-wrapper">
-            <a href="#" class="logo-area" aria-label="+359 Tuning Studio">
-                <span class="logo-symbol">+359</span>
-                <span class="logo-text">TUNING STUDIO</span>
-            </a>
-            <nav class="nav-links" aria-label="Основна навигация">
-                <a href="#home" class="nav-link active">Начало</a>
-                <a href="#services" class="nav-link">Услуги</a>
-                <a href="#about" class="nav-link">За нас</a>
-            </nav>
-            <div class="nav-cta">
-                <button class="btn btn-primary open-portal-btn">
-                    <span>Към Тунинг Портала</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    <!-- Header / Sticky Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="#home" class="logo" id="nav-logo">
+                    <i data-lucide="gauge" class="text-accent" style="width: 28px; height: 28px;"></i>
+                    +359<span>TUNING STUDIO</span>
+                </a>
+                
+                <!-- Center Links -->
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#home" id="link-home">Начало</a></li>
+                        <li><a href="#services" id="link-services">Услуги</a></li>
+                        <li><a href="#about" id="link-about">За нас</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Right Side CTA -->
+                <div class="nav-cta">
+                    <a href="portal.html" class="btn btn-primary" id="cta-portal-header">Към Тунинг Портала</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Отвори менюто">
+                    <i data-lucide="menu"></i>
                 </button>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-nav-toggle" aria-label="Меню">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-        <div class="mobile-drawer-header">
-            <a href="#" class="logo-area">
-                <span class="logo-symbol">+359</span>
-                <span class="logo-text">TUNING</span>
-            </a>
-            <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
-        </div>
-        <div class="mobile-drawer-links">
-            <a href="#home" class="mobile-link">Начало</a>
-            <a href="#services" class="mobile-link">Услуги</a>
-            <a href="#about" class="mobile-link">За нас</a>
-            <button class="btn btn-primary open-portal-btn mobile-cta-btn">Към Тунинг Портала</button>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" id="mobile-link-home">Начало</a></li>
+            <li><a href="#services" id="mobile-link-services">Услуги</a></li>
+            <li><a href="#about" id="mobile-link-about">За нас</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="portal.html" class="btn btn-primary" style="width: 100%; display: block;" id="mobile-cta-portal">Към Тунинг Портала</a>
         </div>
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <div class="badge">EЛИТЕН АВТОМОБИЛЕН ИНЖЕНЕРИНГ</div>
-                    <h1 class="hero-title">Предефинираме мощността.<br><span class="gradient-text">Премиум тунинг софтуер и дизайн.</span></h1>
-                    <p class="hero-subtitle">Добре дошли в бъдещето на автомобилната еволюция. Студио за индивидуален силов тунинг, софтуерни модификации и екстериорен дизайн.</p>
-                    <div class="hero-actions">
-                        <a href="tel:+359883420038" class="btn btn-accent btn-large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content animate-fade-in-up">
+                    <div class="hero-badge">
+                        <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+                        Партньор с над 32 европейски тунинг фирми
+                    </div>
+                    <h1 class="hero-title" id="hero-heading">
+                        Предефинираме мощността. <span class="text-accent">Професионален чип тунинг</span> и сервиз.
+                    </h1>
+                    <p class="hero-description" id="hero-subheading">
+                        Специализиран автоцентър +359 Tuning Studio в гр. Бургас. Компютърна автодиагностика, ремонт и силов тунинг на дилърско ниво.
+                    </p>
+                    
+                    <!-- Brand Logos Slider (Endless Marquee) - Positioned above CTA -->
+                    <div class="brand-marquee hero-brand-slider">
+                        <div class="brand-marquee-track">
+                            <!-- Set 1 -->
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><line x1="15" y1="15" x2="15" y2="2"/><line x1="15" y1="15" x2="4" y2="21"/><line x1="15" y1="15" x2="26" y2="21"/></svg>
+                                MERCEDES
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="8"/><line x1="15" y1="7" x2="15" y2="23"/><line x1="7" y1="15" x2="23" y2="15"/></svg>
+                                BMW
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 100 30" width="45" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="20" cy="15" r="9"/><circle cx="34" cy="15" r="9"/><circle cx="48" cy="15" r="9"/><circle cx="62" cy="15" r="9"/></svg>
+                                AUDI
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><path d="M7 10 L12 22 L15 15 L18 22 L23 10"/><path d="M10 8 L15 16 L20 8"/></svg>
+                                VW
+                            </div>
+                            <div class="brand-logo-item">
+                                PORSCHE
+                            </div>
+                            <div class="brand-logo-item">
+                                BENTLEY
+                            </div>
+                            <div class="brand-logo-item">
+                                ASTON MARTIN
+                            </div>
+                            <!-- Set 2 -->
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><line x1="15" y1="15" x2="15" y2="2"/><line x1="15" y1="15" x2="4" y2="21"/><line x1="15" y1="15" x2="26" y2="21"/></svg>
+                                MERCEDES
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="8"/><line x1="15" y1="7" x2="15" y2="23"/><line x1="7" y1="15" x2="23" y2="15"/></svg>
+                                BMW
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 100 30" width="45" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="20" cy="15" r="9"/><circle cx="34" cy="15" r="9"/><circle cx="48" cy="15" r="9"/><circle cx="62" cy="15" r="9"/></svg>
+                                AUDI
+                            </div>
+                            <div class="brand-logo-item">
+                                <svg viewBox="0 0 30 30" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="15" cy="15" r="13"/><path d="M7 10 L12 22 L15 15 L18 22 L23 10"/><path d="M10 8 L15 16 L20 8"/></svg>
+                                VW
+                            </div>
+                            <div class="brand-logo-item">
+                                PORSCHE
+                            </div>
+                            <div class="brand-logo-item">
+                                BENTLEY
+                            </div>
+                            <div class="brand-logo-item">
+                                ASTON MARTIN
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="tel:+359883420038" class="btn btn-primary" id="btn-call-hero">
+                            <i data-lucide="phone-call" style="width: 18px; height: 18px;"></i>
                             Обади се сега
                         </a>
-                        <button class="btn btn-outline btn-large open-portal-btn">
+                        <a href="portal.html" class="btn btn-secondary" id="btn-portal-hero">
+                            <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
                             Тунинг Портал
-                        </button>
-                    </div>
-                    <div class="hero-features-strip">
-                        <div class="feature-item">
-                            <span class="feature-number">Stage 1/2/3</span>
-                            <span class="feature-label">Индивидуален ремап</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-number">100%</span>
-                            <span class="feature-label">Лицензиран софтуер</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-number">Dyno</span>
-                            <span class="feature-label">Доказани резултати</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="hero-image-wrapper">
-                    <img src="hero_sports_car.png" alt="Porsche GT3 inside +359 Tuning Studio clean laboratory" class="hero-image">
-                    <div class="image-overlay-card">
-                        <div class="pulse-indicator"></div>
-                        <div class="card-details">
-                            <span class="card-title">Porsche 911 GT3 (992)</span>
-                            <span class="card-desc">Инженеринг на най-високо ниво</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services & Engineering Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">ВЪРХОВИ ТЕХНОЛОГИИ</span>
-                    <h2 class="section-title">Нашите Инженерни Услуги</h2>
-                    <p class="section-subtitle">Съчетаваме прецизен софтуерен инженеринг с безупречна естетика, за да извлечем пълния потенциал на Вашата машина.</p>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Card 1 -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                        </div>
-                        <h3 class="service-title">Софтуерен Тунинг (Chiptuning)</h3>
-                        <p class="service-text">Оптимизация на ECU за Stage 1, Stage 2 и Stage 3. Индивидуално калибриране, извличане на скрития потенциал за максимална мощност и въртящ момент, комбинирано с оптимизиран разход на гориво (Eco Tuning).</p>
-                        <ul class="service-list">
-                            <li><span class="bullet"></span>Stage 1: Безопасна мощност (+20-35%)</li>
-                            <li><span class="bullet"></span>Stage 2: Спортни изпускателни системи</li>
-                            <li><span class="bullet"></span>Stage 3: Хибридни турбини и горивни системи</li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="service-card">
-                        <div class="service-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                        </div>
-                        <h3 class="service-title">Оптичен Тунинг & Студио</h3>
-                        <p class="service-text">Външна трансформация чрез монтаж на висококачествени карбонови компоненти (аеродинамични детайли, спойлери, дифузьори), висок клас предпазно (PPF) и цветно фолио, както и цялостен визуален стайлинг.</p>
-                        <ul class="service-list">
-                            <li><span class="bullet"></span>Аеродинамични компоненти от сух карбон</li>
-                            <li><span class="bullet"></span>XPEL PPF фолио за максимална защита</li>
-                            <li><span class="bullet"></span>Професионално детайлинг обслужване</li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="service-card highlighted-card">
-                        <div class="service-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                        </div>
-                        <h3 class="service-title">Тунинг Портал & Файл Сервиз</h3>
-                        <p class="service-text">Автоматизирана софтуерна платформа за дилъри и партньори. Качвайте оригинални файлове и получете модифицирани карти в реално време, проверени на дино стенд от нашите топ инженери.</p>
-                        <div class="card-action-container">
-                            <button class="btn btn-primary btn-full open-portal-btn">Вход в Портала</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Tech Row -->
-                <div class="showcase-tech-row">
-                    <div class="showcase-image-col">
-                        <img src="carbon_detail.png" alt="Carbon fiber detail work by +359 Tuning Studio" class="showcase-img">
-                    </div>
-                    <div class="showcase-info-col">
-                        <div class="mini-badge">ВНИМАНИЕ КЪМ ДЕТАЙЛА</div>
-                        <h3 class="showcase-title">Безупречност, която се вижда</h3>
-                        <p class="showcase-desc">Всеки елемент, който инсталираме, преминава през строг контрол на качеството. Ние не правим компромиси с материалите — работим изключително с пресован и вакуумиран сух карбон, гарантиращ перфектно пасване и изключителна лекота.</p>
-                        <div class="tech-spec-grid">
-                            <div class="spec-card">
-                                <h4>Сух Карбон</h4>
-                                <p>Високотемпературно автоклавно формоване.</p>
-                            </div>
-                            <div class="spec-card">
-                                <h4>Ултра Лекота</h4>
-                                <p>До 60% намаление на теглото спрямо пластмаса.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About & Contact Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-content">
-                        <span class="section-badge">ЗА НАС</span>
-                        <h2 class="section-title">Безкомпромисно качество</h2>
-                        <p class="about-p">Ние сме екип от професионалисти, отдадени на каузата да извлекат пълния потенциал от вашия автомобил. Работим с най-модерната диагностична апаратура и лицензиран софтуер, гарантирайки безопасност, надеждност и брутални резултати на пътя.</p>
-                        <p class="about-p">Всички разработени от нас софтуерни карти се тестват в реално време, гарантирайки дълголетие на двигателя и скоростната кутия при оптимално увеличение на мощността.</p>
-                        
-                        <div class="contact-block-wrapper">
-                            <h3 class="contact-block-title">Контакти & Информация</h3>
-                            
-                            <a href="tel:+359883420038" class="contact-item-link" aria-label="Обадете се на +359 883 420 038">
-                                <div class="contact-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                </div>
-                                <div class="contact-details-text">
-                                    <span class="contact-label">Телефон за връзка (Call Now)</span>
-                                    <span class="contact-value">+359 883 420 038</span>
-                                </div>
-                            </a>
-
-                            <a href="mailto:office@tuningstudio.bg" class="contact-item-link" aria-label="Изпратете имейл на office@tuningstudio.bg">
-                                <div class="contact-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                </div>
-                                <div class="contact-details-text">
-                                    <span class="contact-label">Имейл за връзка</span>
-                                    <span class="contact-value">office@tuningstudio.bg</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="about-visual">
-                        <img src="engine_bay.png" alt="Tuned clean engine bay by +359 Tuning Studio" class="about-img">
-                        <div class="tech-floating-tag">
-                            <span class="tag-title">ECU Спецификации</span>
-                            <span class="tag-desc">Калибриране по заводски протоколи</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container footer-wrapper">
-            <div class="footer-brand">
-                <a href="#" class="logo-area">
-                    <span class="logo-symbol">+359</span>
-                    <span class="logo-text">TUNING STUDIO</span>
-                </a>
-                <p class="footer-desc">Високотехнологичен силов тунинг, лицензиран софтуер и визуално съвършенство за Вашия премиум автомобил.</p>
-            </div>
-            
-            <div class="footer-links-col">
-                <h4 class="footer-title">Навигация</h4>
-                <div class="footer-links">
-                    <a href="#home">Начало</a>
-                    <a href="#services">Услуги</a>
-                    <a href="#about">За нас</a>
-                </div>
-            </div>
-
-            <div class="footer-links-col">
-                <h4 class="footer-title">Контакти</h4>
-                <div class="footer-links">
-                    <a href="tel:+359883420038">+359 883 420 038</a>
-                    <a href="mailto:office@tuningstudio.bg">office@tuningstudio.bg</a>
-                    <button class="portal-footer-link open-portal-btn">Вход в Тунинг Портала</button>
+                
+                <div class="hero-media animate-fade-in-up delay-1">
+                    <img src="images/hero_sports_car.png" alt="Спортен автомобил в автоцентър +359 Tuning Studio" id="hero-image">
                 </div>
             </div>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 +359 Tuning Studio. Всички права запазени.</p>
-            <p class="tech-credits">Designed with Precision.</p>
+    </section>
+
+    <!-- 2. Services & Engineering Section -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Какво предлагаме</span>
+                <h2 class="section-title" id="services-heading">Нашите Инженерни Услуги</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Card 1: Chiptuning -->
+                <div class="service-card animate-fade-in-up">
+                    <div class="service-image-container">
+                        <img src="images/chiptuning_detail.png" alt="Софтуерен тунинг диагностика">
+                    </div>
+                    <div class="service-icon-box">
+                        <i data-lucide="sliders" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>Софтуерен Тунинг (Chiptuning)</h3>
+                    <p>Индивидуални настройки Stage 1, Stage 2 и Stage 3 за леки, лекотоварни и товарни автомобили. Оптимизация на софтуера за по-добра динамика, по-висока мощност и максимална горивна ефективност.</p>
+                    <a href="portal.html" class="btn-link" id="link-service-1">
+                        Към тунинг калкулатора
+                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 2: Diesel & Mechanical -->
+                <div class="service-card animate-fade-in-up delay-1">
+                    <div class="service-image-container">
+                        <img src="images/optical_detail.png" alt="Механичен и дизелов сервиз">
+                    </div>
+                    <div class="service-icon-box">
+                        <i data-lucide="wrench" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>Дизелов & Механичен Сервиз</h3>
+                    <p>Комплексно обслужване (масла, филтри, ремъци), ремонт на окачване, ходова част, спирачна система. Специализиран дизелов сервиз и ремонт на всички марки и модели турбокомпресори.</p>
+                    <a href="tel:+359883420038" class="btn-link" id="link-service-2">
+                        Запази час за сервиз
+                        <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 3: Electronics & Equipment -->
+                <div class="service-card animate-fade-in-up delay-2">
+                    <div class="service-image-container" style="display: flex; align-items: center; justify-content: center; background-color: var(--bg-secondary);">
+                        <i data-lucide="circuit-board" class="text-accent" style="width: 64px; height: 64px; opacity: 0.7;"></i>
+                    </div>
+                    <div class="service-icon-box">
+                        <i data-lucide="cpu" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>Електроника & Тунинг Апаратура</h3>
+                    <p>Програмиране и ремонт на електронни системи за впръскване и управление на двигателя на дилърско ниво. Производство и продажба на професионална тунинг апаратура и оборудване.</p>
+                    <a href="portal.html" class="btn btn-outline" style="align-self: flex-start; margin-top: auto;" id="btn-service-portal">Тунинг Файл Сервиз</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About & Contact Section -->
+    <section class="about-contact section-padding" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text animate-fade-in-up">
+                    <span class="section-subtitle">За автоцентъра</span>
+                    <h2 class="section-title" id="about-heading">Безкомпромисна прецизност</h2>
+                    <p>+359 Tuning Studio е специализиран автоцентър в гр. Бургас, отдаден на каузата да извлече пълния потенциал от вашия автомобил. Разполагаме с последно поколение диагностична апаратура и работим на дилърско ниво по отношение на автодиагностиката и электрониката, което гарантира безопасност, дългосрочна надеждност и брутални резултати на пътя.</p>
+                    
+                    <div class="brand-showcase">
+                        <div class="brand-card">
+                            <div class="brand-num">32+</div>
+                            <div class="brand-label">Тунинг партньора</div>
+                        </div>
+                        <div class="brand-card">
+                            <div class="brand-num">1500+</div>
+                            <div class="brand-label">Проекта</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-details-box animate-fade-in-up delay-1">
+                    <h2 class="section-title" style="margin-bottom: 2rem; font-size: 2rem;">Контакти</h2>
+                    
+                    <div class="info-cards">
+                        <!-- Phone info card -->
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Телефон за връзка</span>
+                                <a href="tel:+359883420038" id="contact-phone">088 342 0038</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email info card -->
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Имейл за връзка</span>
+                                <a href="mailto:office@tuningstudio.bg" id="contact-email">office@tuningstudio.bg</a>
+                            </div>
+                        </div>
+
+                        <!-- Address card -->
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Адрес на автоцентъра</span>
+                                <p style="font-size: 1.05rem; margin: 0; font-weight: 700;">гр. Бургас, бул. „Тодор Александров“ (Южна промишлена зона)</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Working hours -->
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="info-details">
+                                <span>Работно Време</span>
+                                <p style="font-size: 1.1rem; margin: 0; font-weight: 700;">Пон - Пет: 09:00 - 18:30 ч. <span style="font-weight: 400; font-size: 0.9rem; color: var(--text-light);">(Съб - Нед: почивни)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <i data-lucide="gauge" class="text-accent" style="width: 24px; height: 24px;"></i>
+                        +359<span>TUNING STUDIO</span>
+                    </a>
+                    <p>Премиум механичен сервиз, дилърска автодиагностика, ремонт на турбокомпресори и професионален чип тунинг за леки и товарни превозни средства.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Начало</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#about">За нас</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Портал</h4>
+                    <ul class="footer-links">
+                        <li><a href="portal.html">Вход в Портала</a></li>
+                        <li><a href="portal.html#database">База данни</a></li>
+                        <li><a href="portal.html#uploader">Файл Сервиз</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Контакти</h4>
+                    <div class="footer-contact-item">
+                        <i data-lucide="phone"></i>
+                        <a href="tel:+359883420038">088 342 0038</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:office@tuningstudio.bg">office@tuningstudio.bg</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>гр. Бургас, бул. „Тодор Александров“</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 +359 Tuning Studio. Всички права запазени.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube" style="width: 18px; height: 18px;"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Interactive Tuning Portal Modal (Slide-Over Drawer) -->
-    <div class="portal-overlay" id="portalOverlay" aria-hidden="true">
-        <div class="portal-drawer">
-            <div class="portal-drawer-header">
-                <div class="portal-title-area">
-                    <span class="portal-badge">ПОРТАЛ ЗА ПАРТНЬОРИ</span>
-                    <h3>+359 TUNING PORTAL</h3>
-                </div>
-                <button class="portal-close-btn" id="closePortalBtn" aria-label="Затвори портала">&times;</button>
-            </div>
-
-            <!-- Portal Tabs -->
-            <div class="portal-tabs">
-                <button class="tab-btn active" data-tab="calculator">Калкулатор за Мощност</button>
-                <button class="tab-btn" data-tab="fileservice">Файл Сервиз</button>
-            </div>
-
-            <div class="portal-body">
-                <!-- Calculator Tab Content -->
-                <div class="tab-content active" id="tab-calculator">
-                    <p class="tab-intro">Изберете марка и модел от падащото меню, за да прегледате симулираните резултати от нашите софтуерни модификации.</p>
-                    
-                    <div class="calculator-form">
-                        <div class="form-group">
-                            <label for="car-brand">Марка автомобил</label>
-                            <select id="car-brand" class="form-select">
-                                <option value="" disabled selected>Изберете марка...</option>
-                                <option value="porsche">Porsche</option>
-                                <option value="bmw">BMW</option>
-                                <option value="mercedes">Mercedes-AMG</option>
-                                <option value="audi">Audi</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="car-model">Двигател / Модел</label>
-                            <select id="car-model" class="form-select" disabled>
-                                <option value="" disabled selected>Изберете първо марка...</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Calculator Results Section -->
-                    <div class="calculator-results-box" id="calcResults" style="display: none;">
-                        <h4 class="results-title">Очаквани Резултати</h4>
-                        
-                        <!-- Tuning Stage Selection Tabs -->
-                        <div class="stage-tabs">
-                            <button class="stage-tab-btn active" data-stage="stock">Заводски (Stock)</button>
-                            <button class="stage-tab-btn" data-stage="stage1">Stage 1</button>
-                            <button class="stage-tab-btn" data-stage="stage2">Stage 2</button>
-                        </div>
-
-                        <!-- HP Progress Bar -->
-                        <div class="metric-container">
-                            <div class="metric-info">
-                                <span class="metric-label">Мощност</span>
-                                <span class="metric-value" id="hp-display">0 к.с.</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill" id="hp-progress" style="width: 0%"></div>
-                            </div>
-                            <div class="progress-bar-ticks">
-                                <span>0 к.с.</span>
-                                <span id="hp-max-tick">800 к.с.</span>
-                            </div>
-                        </div>
-
-                        <!-- NM Progress Bar -->
-                        <div class="metric-container">
-                            <div class="metric-info">
-                                <span class="metric-label">Въртящ Момент</span>
-                                <span class="metric-value" id="nm-display">0 Nm</span>
-                            </div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill accent-cyan" id="nm-progress" style="width: 0%"></div>
-                            </div>
-                            <div class="progress-bar-ticks">
-                                <span>0 Nm</span>
-                                <span id="nm-max-tick">1000 Nm</span>
-                            </div>
-                        </div>
-
-                        <!-- Spec differences -->
-                        <div class="spec-diff-grid">
-                            <div class="diff-card">
-                                <span class="diff-title">Прираст к.с.</span>
-                                <span class="diff-value" id="hp-gain">+0 к.с.</span>
-                            </div>
-                            <div class="diff-card">
-                                <span class="diff-title">Прираст Nm</span>
-                                <span class="diff-value text-cyan" id="nm-gain">+0 Nm</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="calculator-placeholder" id="calcPlaceholder">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="placeholder-icon"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                        <p>Моля, изберете марка и модел автомобил, за да видите спецификациите на софтуерния тунинг.</p>
-                    </div>
-                </div>
-
-                <!-- File Service Tab Content -->
-                <div class="tab-content" id="tab-fileservice">
-                    <p class="tab-intro">Платформа за автоматично калибриране. Качете Вашия оригинален флаш файл от автомобила (.bin, .hex) и нашият сървър ще симулира процес по разчитане и модификация.</p>
-                    
-                    <!-- File Upload Simulator Drag Zone -->
-                    <div class="upload-zone" id="uploadZone">
-                        <input type="file" id="fileInput" class="file-input" accept=".bin,.hex,.ori,.rar,.zip">
-                        <svg class="upload-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                        <h4 class="upload-text">Провлачете оригинален ECU файл тук</h4>
-                        <p class="upload-subtext">или <span class="upload-link">изберете от компютъра</span></p>
-                        <span class="file-limits">Поддържани формати: .bin, .hex, .ori (Макс. 16MB)</span>
-                    </div>
-
-                    <!-- Upload and Simulation Progress Box -->
-                    <div class="upload-progress-box" id="uploadProgressBox" style="display: none;">
-                        <div class="file-info-header">
-                            <div class="file-details">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                                <div class="file-name-meta">
-                                    <span class="file-name" id="fileNameDisplay">original_ecu_dump.bin</span>
-                                    <span class="file-size" id="fileSizeDisplay">4.0 MB</span>
-                                </div>
-                            </div>
-                            <button class="cancel-upload" id="cancelUploadBtn">&times;</button>
-                        </div>
-
-                        <!-- Progress Bar -->
-                        <div class="sim-progress-wrapper">
-                            <div class="sim-progress-label">
-                                <span id="progressStatusText">Качване на файла...</span>
-                                <span id="progressPercent">0%</span>
-                            </div>
-                            <div class="sim-progress-bg">
-                                <div class="sim-progress-fill" id="simProgressFill" style="width: 0%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Interactive Terminal Console Simulation -->
-                        <div class="console-box" id="consoleBox">
-                            <div class="console-line">> Инициализиране на връзка с файл сървър...</div>
-                        </div>
-                    </div>
-
-                    <!-- Success State -->
-                    <div class="upload-success-box" id="uploadSuccessBox" style="display: none;">
-                        <div class="success-icon-check">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <h3>Файлът е обработен успешно!</h3>
-                        <p>Нашият екип от инженери за софтуерни модификации извърши автоматичен анализ и симулация. Документ със спецификациите е изпратен към асоциирания дилърски акаунт.</p>
-                        
-                        <div class="success-actions">
-                            <button class="btn btn-outline" id="resetUploadBtn">Качи нов файл</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main JS Application -->
-    <script src="app.js"></script>
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
