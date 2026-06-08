@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тунинг Портал & Файл Сервиз | Genetic Motorsport</title>
+    <meta name="description" content="Интерактивен портал за изчисляване на мощност и качване на софтуерни файлове за Stage 1, Stage 2 и Stage 3 модификации.">
+    
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="header scrolled" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <a href="index.html" class="logo" id="nav-logo">
+                    <i data-lucide="gauge" class="text-accent" style="width: 28px; height: 28px;"></i>
+                    GENETIC<span>MOTORSPORT</span>
+                </a>
+                
+                <!-- Center Links -->
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html#home" id="link-home">Начало</a></li>
+                        <li><a href="index.html#services" id="link-services">Услуги</a></li>
+                        <li><a href="index.html#about" id="link-about">За нас</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Right Side CTA -->
+                <div class="nav-cta">
+                    <a href="tel:+359883420038" class="btn btn-primary" id="cta-call-header">
+                        <i data-lucide="phone" style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 4px;"></i>
+                        Свържи се сега
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Отвори менюто">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#home" id="mobile-link-home">Начало</a></li>
+            <li><a href="index.html#services" id="mobile-link-services">Услуги</a></li>
+            <li><a href="index.html#about" id="mobile-link-about">За нас</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="tel:+359883420038" class="btn btn-primary" style="width: 100%; display: block;" id="mobile-cta-call">Обади се сега</a>
+        </div>
+    </div>
+
+    <!-- Portal Section -->
+    <main class="portal-page">
+        <div class="container">
+            <div class="portal-grid">
+                
+                <!-- Sidebar Controls -->
+                <aside class="portal-sidebar">
+                    <h3 class="sidebar-title">Конфигуратор</h3>
+                    
+                    <div class="form-group">
+                        <label for="select-make">Марка</label>
+                        <select id="select-make" class="form-control">
+                            <option value="porsche">Porsche</option>
+                            <option value="mercedes">Mercedes-AMG</option>
+                            <option value="bmw">BMW M</option>
+                            <option value="audi">Audi RS</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="select-model">Модел</label>
+                        <select id="select-model" class="form-control">
+                            <!-- Dynamic Options -->
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="select-engine">Двигател</label>
+                        <select id="select-engine" class="form-control">
+                            <!-- Dynamic Options -->
+                        </select>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4 style="font-size: 0.9rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;">Избор на Степен</h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <button class="stage-btn-sidebar btn btn-secondary active" data-stage="1" style="text-align: left; padding: 0.75rem 1rem; border-radius: var(--border-radius-sm); font-weight: 600;">Stage 1 Оптимизация</button>
+                            <button class="stage-btn-sidebar btn btn-secondary" data-stage="2" style="text-align: left; padding: 0.75rem 1rem; border-radius: var(--border-radius-sm); font-weight: 600;">Stage 2 Оптимизация</button>
+                            <button class="stage-btn-sidebar btn btn-secondary" data-stage="3" style="text-align: left; padding: 0.75rem 1rem; border-radius: var(--border-radius-sm); font-weight: 600;">Stage 3 Оптимизация</button>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Main Dashboard View -->
+                <section class="portal-main">
+                    
+                    <!-- Welcome Info -->
+                    <div class="portal-welcome-card">
+                        <h2>Добре дошли в Тунинг Портала</h2>
+                        <p>Изберете вашия автомобил от менюто вляво, за да видите потенциала за увеличаване на мощността и въртящия момент. Можете също да качите вашия софтуерен файл по-долу за безплатна оценка.</p>
+                    </div>
+                    
+                    <!-- Dynamic Performance Chart / Meter -->
+                    <div class="tuning-specs-card" id="database">
+                        <div class="specs-header">
+                            <h3 class="specs-title" id="vehicle-title-display">Porsche 911 GT3 (992)</h3>
+                            <div class="stage-select">
+                                <button class="stage-btn active" data-stage="1">Stage 1</button>
+                                <button class="stage-btn" data-stage="2">Stage 2</button>
+                                <button class="stage-btn" data-stage="3">Stage 3</button>
+                            </div>
+                        </div>
+                        
+                        <div class="specs-display-grid">
+                            <!-- Horsepower Meter -->
+                            <div class="spec-meter-container">
+                                <div class="spec-label">
+                                    <span class="spec-name">Мощност (HP)</span>
+                                    <span class="spec-diff" id="hp-gain">+45 HP</span>
+                                </div>
+                                <div class="spec-values">
+                                    <div class="spec-val-box">
+                                        <span>Оригинална</span>
+                                        <p id="hp-orig">510</p>
+                                    </div>
+                                    <div class="spec-val-box" style="text-align: right;">
+                                        <span style="color: var(--color-accent); font-weight: 600;">След Тунинг</span>
+                                        <p style="color: var(--color-accent);" id="hp-tuned">555</p>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill-orig" id="hp-bar-orig" style="width: 70%;"></div>
+                                    <div class="progress-fill-tuned" id="hp-bar-tuned" style="width: 77%;"></div>
+                                </div>
+                                <div class="spec-footer-info">
+                                    <span>0 HP</span>
+                                    <span>1200 HP</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Torque Meter -->
+                            <div class="spec-meter-container">
+                                <div class="spec-label">
+                                    <span class="spec-name">Въртящ Момент (Nm)</span>
+                                    <span class="spec-diff" id="torque-gain">+50 Nm</span>
+                                </div>
+                                <div class="spec-values">
+                                    <div class="spec-val-box">
+                                        <span>Оригинален</span>
+                                        <p id="torque-orig">470</p>
+                                    </div>
+                                    <div class="spec-val-box" style="text-align: right;">
+                                        <span style="color: var(--color-accent); font-weight: 600;">След Тунинг</span>
+                                        <p style="color: var(--color-accent);" id="torque-tuned">520</p>
+                                    </div>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill-orig" id="torque-bar-orig" style="width: 47%;"></div>
+                                    <div class="progress-fill-tuned" id="torque-bar-tuned" style="width: 52%;"></div>
+                                </div>
+                                <div class="spec-footer-info">
+                                    <span>0 Nm</span>
+                                    <span>2000 Nm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Drag-and-drop File Upload Container -->
+                    <div class="upload-card" id="uploader">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Файл Сервиз (Изпращане на Оригинален Файл)</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 2rem;">Качете вашия оригинален софтуерен файл (четени с Kess, Autotuner, Flex или др.), за да анализираме състоянието и да ви подготвим индивидуален тунинг файл.</p>
+                        
+                        <div class="upload-area" id="drag-drop-area">
+                            <div class="upload-icon">
+                                <i data-lucide="cloud-upload" style="width: 48px; height: 48px;"></i>
+                            </div>
+                            <h4>Провлечете и пуснете вашия файл тук</h4>
+                            <p>или кликнете за избор от вашия компютър (.bin, .ori, .zip, .rar)</p>
+                            <button class="btn btn-secondary" id="btn-select-file" style="pointer-events: none;">Избери файл</button>
+                            <input type="file" id="file-input-element" class="file-input">
+                        </div>
+                        
+                        <!-- Uploading Progress Bar -->
+                        <div class="upload-progress" id="upload-progress-box">
+                            <div class="upload-progress-bar">
+                                <div class="upload-progress-fill" id="upload-bar-fill"></div>
+                            </div>
+                            <div class="upload-status-text">
+                                <span id="upload-filename">tuning_file.bin</span>
+                                <span id="upload-percent">35%</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Success Message -->
+                        <div class="upload-success-msg" id="upload-success-container">
+                            <i data-lucide="check-circle" style="width: 20px; height: 20px; flex-shrink: 0;"></i>
+                            <div>
+                                <strong>Успешно изпратен файл!</strong>
+                                <span style="display: block; font-size: 0.85rem; margin-top: 0.2rem;">Нашите инженери ще анализират файла и ще се свържат с вас по имейл или телефон в рамките на 30 минути.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Genetic Motorsport. Всички права запазени.</p>
+                <p>Телефон: <a href="tel:+359883420038" style="font-weight: 600; color: var(--color-primary);">088 342 0038</a> &nbsp;|&nbsp; Имейл: <a href="mailto:office@geneticmotorsport.bg" style="font-weight: 600; color: var(--color-primary);">office@geneticmotorsport.bg</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
